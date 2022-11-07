@@ -1,4 +1,4 @@
-[![NPM](https://img.shields.io/npm/v/@vtaits/create-required-context.svg)](https://www.npmjs.com/package/@vtaits/create-required-context)
+[![NPM](https://img.shields.io/npm/v/@vtaits/react-required-context.svg)](https://www.npmjs.com/package/@vtaits/react-required-context)
 
 # @vtaits/react-required-context
 
