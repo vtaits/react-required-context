@@ -6,4 +6,4 @@ import {
 
 export const createContext = <
 ValueType,
->() => createContextBase<ValueType | typeof DEFAULT_VALUE>(DEFAULT_VALUE);
+>() => createContextBase<ValueType>(DEFAULT_VALUE as unknown as ValueType);

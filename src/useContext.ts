@@ -8,7 +8,7 @@ import {
   ERROR_MESSAGE,
 } from './constants';
 
-export const useContext = <ValueType>(context: Context<ValueType | typeof DEFAULT_VALUE>) => {
+export const useContext = <ValueType>(context: Context<ValueType>) => {
   const contextValue = useContextBase(context);
 
   if (contextValue === DEFAULT_VALUE) {
