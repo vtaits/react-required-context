@@ -1,19 +1,14 @@
-import { useContext as useContextBase } from 'react';
-import type {
-  Context,
-} from 'react';
+import { useContext as useContextBase } from "react";
+import type { Context } from "react";
 
-import {
-  DEFAULT_VALUE,
-  ERROR_MESSAGE,
-} from './constants';
+import { DEFAULT_VALUE, ERROR_MESSAGE } from "./constants";
 
 export const useContext = <ValueType>(context: Context<ValueType>) => {
-  const contextValue = useContextBase(context);
+	const contextValue = useContextBase(context);
 
-  if (contextValue === DEFAULT_VALUE) {
-    throw new Error(ERROR_MESSAGE);
-  }
+	if (contextValue === DEFAULT_VALUE) {
+		throw new Error(ERROR_MESSAGE);
+	}
 
-  return contextValue;
+	return contextValue;
 };
