@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@vtaits/react-required-context",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React context that has no default value and must be defined to be used",
   "files": [
     "dist"
