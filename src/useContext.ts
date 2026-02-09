@@ -1,5 +1,5 @@
-import { useContext as useContextBase } from "react";
 import type { Context } from "react";
+import { useContext as useContextBase } from "react";
 
 import { DEFAULT_VALUE, ERROR_MESSAGE } from "./constants";
 
