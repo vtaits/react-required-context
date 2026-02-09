@@ -13,7 +13,8 @@
     "./package.json": "./package.json",
     ".": {
       "types": "./dist/ts/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "keywords": [
@@ -25,7 +26,10 @@
   ],
   "license": "MIT",
   "author": "Vadim Taits <taizvadim@gmail.com>",
-  "repository": "git@github.com:vtaits/react-required-context.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vtaits/react-required-context.git"
+  },
   "scripts": {
     "build": "bun build.ts && tsgo -p tsconfig.build.json",
     "test:ts": "tsgo",
