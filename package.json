@@ -4,19 +4,22 @@
   "version": "1.0.4",
   "description": "React context that has no default value and must be defined to be used",
   "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "dist/ts/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/ts/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
-  },
+		"dist",
+		"src",
+		"!src/**/*.test.js",
+		"!src/**/*.test.jsx"
+	],
+	"main": "./src/index.js",
+	"module": "./src/index.js",
+	"typings": "dist/ts/index.d.ts",
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"types": "./dist/ts/index.d.ts",
+			"import": "./src/index.js",
+			"default": "./src/index.js"
+		}
+	},
   "keywords": [
     "react",
     "createcontext",
@@ -31,8 +34,8 @@
     "url": "git+ssh://git@github.com/vtaits/react-required-context.git"
   },
   "scripts": {
-    "build": "bun build.ts && tsgo -p tsconfig.build.json",
-    "test:ts": "tsgo",
+    "build": "tsc -p tsconfig.build.json",
+    "test:ts": "tsc",
     "test:unit": "bun test --coverage",
     "lint": "biome check src",
     "lint:fix": "biome check src --write --unsafe",
@@ -43,16 +46,15 @@
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.14",
-    "@happy-dom/global-registrator": "^20.5.3",
-    "@testing-library/react": "^16.3.0",
-    "@types/bun": "latest",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "happy-dom": "^20.5.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "typescript": "^5.8.3"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "@biomejs/biome": "^2.6.4",
+    "@happy-dom/global-registrator": "^21.0.4",
+    "@testing-library/react": "^16.3.3",
+    "@types/bun": "^1.4.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "happy-dom": "^21.0.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2"
+  }
 }

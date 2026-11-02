@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es2023",
-    "outDir": "dist/ts",
+    "types": ["bun"],
+		"target": "es2023",
+		"outDir": "dist/ts",
     "jsx": "react-jsx",
-    "lib": ["ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "rootDir": "../..",
-    "noEmit": true
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"allowJs": true,
+		"checkJs": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"rootDir": "."
   },
   "include": [
     "src/**/*"

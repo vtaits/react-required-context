@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { renderHook } from "@testing-library/react";
-import { createContext } from "./createContext";
-import { useContext } from "./useContext";
+import { createContext } from "./createContext.js";
+import { useContext } from "./index.js";
 
 const Context = createContext();
 
@@ -13,9 +13,7 @@ test("should throw error if `useContext` returns default value", () => {
 
 test("should return result `useContext` if it is not default value", () => {
 	const { result } = renderHook(() => useContext(Context), {
-		wrapper: ({ children }) => (
-			<Context.Provider value="test">{children}</Context.Provider>
-		),
+		wrapper: ({ children }) => <Context value="test">{children}</Context>,
 	});
 
 	expect(result.current).toBe("test");

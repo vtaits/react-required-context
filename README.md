@@ -33,9 +33,9 @@ function ChildComponent() {
 
 function App() {
   return (
-    <Context.Provider value={complexValue}> // complexValue muse be of type `VeryComplesStructure`
+    <Context value={complexValue}> // complexValue muse be of type `VeryComplesStructure`
       <ChildComponent />
-    </Context.Provider>
+    </Context>
   );
 }
 ```
